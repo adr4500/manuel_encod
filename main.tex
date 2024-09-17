@@ -1,0 +1,43 @@
+\documentclass[a4paper,12pt]{report}
+
+% Packages for formatting
+\usepackage{graphicx} % For including images (e.g., logos)
+\usepackage{setspace} % For adjusting spacing
+
+% Custom title page
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{2cm} % Adjusts vertical position
+    
+    % Title of the document
+    {\Huge\textbf{Guide de l'encodage lumière}}\\[1.5cm]
+    
+    % Subtitle or project description
+    {\Large\textit{Programmer la Chimp pour un spectacle}}\\[2cm]
+    
+    % Author's name
+    {\Large Adrien Hervé}\\[0.5cm]
+    
+    % Optional: Company or institution
+    {\large\textit{Décibels UTC}}\\[3cm]
+    
+    % Date
+    {\large Septembre 2024 - V1.0}\\[3cm]
+    
+    % Logo
+    \includegraphics[width=0.5\textwidth]{Logos/logo_decibels.png}
+    
+    \vfill % Pushes the following text to the bottom of the page
+\end{titlepage}
+
+% Table of contents
+\newpage
+\tableofcontents
+\newpage
+
+% Content
+\input{1 - Introduction/Introduction.tex}
+
+\end{document}
