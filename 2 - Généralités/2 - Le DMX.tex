@@ -1,0 +1,22 @@
+\section{Le DMX}
+\label{sec:dmx}
+
+Le DMX est un protocole de communication standardisé qui permet de contrôler des projecteurs ou divers appareils liés à la lumière.
+\newline
+Ce protocole est unidirectionnel, c'est-à-dire que les informations ne circulent que dans un sens : de la console vers les projecteurs. En aucun cas la console ne reçoit d'informations des projecteurs.
+\newline
+\newline
+Dans la norme DMX, les informations transitent à travers un câble 5 broches. Cependant, deux des broches ne sont pas utilisées par le DMX. C'est pour cela qu'il est aussi possible de transmettre les informations à travers un câble 3 broches (semblable à un connecteur XLR).
+\newline
+Le premier conducteur est la masse, le second est le signal, et le troisième est le signal inversé (en opposition de phase). On appelle cette construction un signal "balancé" ou "symétrique". Il permet de réduire les perturbations électromagnetiques accumulées le long du câble.
+\newline
+\newline
+Le signal DMX permet d'envoyer 512 $\times$ 8 bits d'information à une fréquence de 44 Hz.
+Chaque information de 8 bits est appelée un "canal". Ainsi, chaque canal peut prendre une valeur entre 0 et 255.
+\newline
+Historiquement, un projecteur n'avait qu'un seul paramètre à contrôler : son intensité. Ainsi, chaque canal correspondait à un projecteur.
+Aujourd'hui, les projecteurs sont plus complexes et peuvent avoir plusieurs paramètres à contrôler. C'est pourquoi un projecteur peut occuper plusieurs canaux.
+Chaque projecteur occupe alors une plage de canaux contigus, dont la taille dépend du nombre de paramètres à contrôler. L'emplacement du premier canal de la plage est appelé "adresse" du projecteur.
+\newline
+Par exemple, supposons que nous ayons 4 projecteurs qui ont chacun 3 paramètres à contrôler (intensité du rouge, intensité du vert et intensité du bleu). Chaque projecteur occupe donc 3 canaux. Le premier projecteur commence à l'adresse 1, le deuxième à l'adresse 4, le troisième à l'adresse 7, et le quatrième à l'adresse 10.
+Le canal 1 contrôle l'intensité du rouge du premier projecteur, le canal 6 contrôle l'intensité du bleu du deuxième projecteur, etc.
