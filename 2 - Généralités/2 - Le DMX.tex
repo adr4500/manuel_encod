@@ -20,3 +20,12 @@ Chaque projecteur occupe alors une plage de canaux contigus, dont la taille dép
 \newline
 Par exemple, supposons que nous disposions de 4 projecteurs qui ont chacun 3 paramètres à contrôler (intensité du rouge, intensité du vert et intensité du bleu). Chaque projecteur occupe donc 3 canaux. Le premier projecteur commence à l'adresse 1, le deuxième à l'adresse 4, le troisième à l'adresse 7, et le quatrième à l'adresse 10.
 Le canal 1 contrôle l'intensité du rouge du premier projecteur, le canal 6 contrôle l'intensité du bleu du deuxième projecteur, etc.
+\newline
+\newline
+Il est possible de faire passer le signal DMX sur un câble réseau (Ethernet) en utilisant le protocole Art-Net.
+Un seul cable RJ45 peut alors transporter jusque 32 768 univers DMX entre la régie et la scène.
+\newline
+Il faut alors utiliser un Node qui recoit l'Art-Net et qui le convertir en sorties physiques DMX.
+\newline
+\newline
+Par la suite, nous appelerons \textit{Fixture} un appareil qui peut être contrôlé en DMX (souvent un projecteur).
