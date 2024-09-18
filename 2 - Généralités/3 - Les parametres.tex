@@ -1,0 +1,108 @@
+\section{Les paramètres}
+\label{sec:paramètres}
+
+Dans cette section, nous allons détailler les différents paramètres que l'on peut généralement contrôler sur un projecteur.
+Un paramètre est souvent associé à un canal unique, mais ce n'est pas toujours le cas. Se référer à la section \ref{sec:fixture_patch} pour plus d'informations.
+
+\subsection{Dimmer}
+\label{subsec:param_dimmer}
+
+Le dimmer est le paramètre le plus simple : il correspond à l'intensité lumineuse du projecteur. À 0\%, le projecteur est éteint, et à 100\%, il est à pleine puissance.
+
+\subsection{Shutter}
+\label{subsec:param_shutter}
+
+Le shutter correspond à l'obturateur du projecteur. Il permet de bloquer la lumière, ou de laisser passer la lumière. Ce terme est hérité des projecteurs traditionnels, qui possédaient un obturateur mécanique.
+Aujourd'hui, le shutter et le dimmer ne contrôlent plus deux éléments distincts : tous deux contrôlent l'intensité lumineuse du projecteur. Là où le dimmer contrôle l'intensité globale, le shutter contrôle la fréquence des effets stroboscopiques (effet de clignotement rapide).
+
+\subsection{Couleur}
+\label{subsec:param_couleur}
+
+Il existe deux manières de contrôler la couleur d'un projecteur : en utilisant des filtres de couleur, ou en utilisant des LED de couleur.
+\newline
+Le premier cas se base sur la synthèse soustractive des couleurs : une lumière blanche est émise par le projecteur, et un filtre de couleur est placé devant la lentille pour ne laisser passer que la couleur souhaitée.
+Un projecteur peut posséder une roue de couleur, qui contient plusieurs filtres de couleur. Le projecteur peut alors tourner la roue pour changer de couleur.
+Il existe aussi des roues de trichromie : trois roues indépendantes respectivement cyan, magenta et jaune présentent un gradient allant du transparent à la couleur pure. En combinant les trois filtres, on peut obtenir n'importe quelle couleur.
+Attention cependant, la trichromie a tendance à faire perdre beaucoup de luminosité au projecteur : un rouge obtenu par trichromie sera moins intense et saturé qu'un rouge obtenu par filtre.
+\newline
+Le deuxième cas se base sur la synthèse additive des couleurs : le projecteur possède des LED de couleur (rouge, vert, bleu) qui peuvent être allumées plus ou moins intensément pour obtenir n'importe quelle couleur.
+On peut aussi trouver des projecteurs avec des LED de couleur ambre, blanc ou bien même UV (parfois appelé "lumière noire").
+
+\subsection{Zoom}
+\label{subsec:param_zoom}
+
+Le zoom permet de modifier la largeur du faisceau lumineux.
+
+\subsection{Gobo}
+\label{subsec:param_gobo}
+
+Un gobo est un filtre placé devant la lentille du projecteur pour projeter une image. Ces effets sont très intéressants pour projeter des motifs sur diverses surfaces, mais aussi pour donner du volume et de la texture au faisceau lumineux dans le brouillard ou la fumée.
+Il existe deux types de gobos : les gobos en métal et les gobos en verre.
+\newline
+Les gobos en métal sont des disques de métal découpés avec des motifs. Ils coûtent peu cher, mais il présentent deux contraintes : ils ne peuvent pas être colorés, et ne peuvent contenir de zone occultante enclavée (un gobo métal étant troué, une telle zone ne pourrait pas être maintenue).
+\newline
+Les gobos en verre sont des disques de verre sur lesquels un motif est imprimé. Ils sont bien plus chers, mais se libèrent de ces contraintes.
+\newline
+\newline
+Les gobos peuvent être fixes ou rotatifs. Les gobos fixes sont simplement placés devant la lentille, tandis que les gobos rotatifs sont montés sur un moteur qui les fait tourner.
+
+\subsection{Prisme}
+\label{subsec:param_prisme}
+
+Le prisme est un filtre optique qui permet de décomposer le faisceau lumineux en plusieurs faisceaux. Ils peuvent être rotatifs pour créer des effets de rotation.
+Les prismes peuvent être linéaires (les faisceaux sont alignés) ou circulaires (les faisceaux sont disposés en cercle).
+\newline
+Il est possible de cumuler plusieurs gobos et prismes si les roues sont indépendantes.
+
+\subsection{Focus}
+\label{subsec:param_focus}
+
+Le focus permet de régler la netteté de l'image projetée. Il n'est jamais simulé sur les logiciels de simulation 3D, il faut toujours le régler avec le projecteur en vrai.
+Le point de focus dépend de plusieurs paramètres : la distance entre le projecteur et la surface de projection, le zoom, la position de la roue de gobo dans la machine, la présence d'un prisme, etc.
+
+\subsection{Frost}
+\label{subsec:param_frost}
+
+Le frost est un filtre qui permet de diffuser la lumière. Il est souvent utilisé pour adoucir les ombres, ou pour créer des effets de lumière douce. Lorsqu'il est combiné avec un gobo, il permet de créer des effets de flou.
+Certains frosts sont continus, permettant de régler l'intensité de la diffusion, tandis que d'autres sont binaires (on/off).
+
+\subsection{Pan}
+\label{subsec:param_pan}
+
+Certains projecteurs sont robotisés et peuvent bouger sur deux axes : pan et tilt. On appelle ces projecteurs des "lyres", "moving heads" en anglais.
+Le pan correspond à l'axe horizontal : le projecteur peut tourner de gauche à droite.
+L'amplitude du pan est souvent de 540°.
+
+\subsection{Tilt}
+\label{subsec:param_tilt}
+
+Le tilt correspond à l'axe vertical : le projecteur peut monter et descendre. Son amplitude est souvent de 270°.
+
+\subsection{Control}
+\label{subsec:param_control}
+
+Il existe généralement un paramètre "control" qui permet d'effectuer des réglages spécifiques au projecteur à distance. Cela peut être par exemple le reset du projecteur, le réglage de la vitesse des moteurs, l'allumage ou l'extinction de la lampe, etc.
+
+\subsection{Autres}
+\label{subsec:param_autres}
+
+Il existe une multitude d'autres paramètres que l'on peut contrôler sur un projecteur. Tout dépend du modèle du projecteur, de sa complexité, et de ses fonctionnalités.
+Par exemple, la Robin MegaPointe de chez Robe permet de contrôler le "hotspot", c'est-à-dire la répartition de l'intensité lumineuse dans le faisceau.
+D'autres projecteurs peuvent se réapproprier des paramètres existants pour en faire des paramètres spécifiques : par exemple, l'IVL Photon de Minuit Une utilise le paramètre "gobo" pour contrôler une fonctionnalité exclusive de l'appareil.
+\newline
+Il est donc important de se référer à la documentation du projecteur pour connaître les paramètres qu'il est possible de contrôler et ses fonctionnalités.
+
+\subsection{Et en DMX ?}
+\label{subsec:param_dmx}
+
+Il y a plusieurs manières de contrôler ces paramètres en DMX.
+\newline
+La plus simple est d'assigner un canal à chaque paramètre. Par exemple, le canal 1 contrôle le dimmer, le canal 2 contrôle le shutter, les canaux 3, 4 et 5 contrôlent respectivement le rouge, le vert et le bleu, un canal contrôle la rotation du gobo, etc.
+\newline
+Il est aussi possible de regrouper plusieurs paramètres sur un seul canal. Par exemple, le canal 1 contrôle le dimmer si sa valeur est inférieure à 128, et le shutter si sa valeur est supérieure à 128.
+\newline
+Enfin, pour certains paramètres, un seul canal ne suffit pas. Par exemple le pan : un canal offre 256 valeurs. Or, l'amplitude du pan est de 540°. La résolution angulaire est alors de 540°/256 = 2.1°. C'est peu précis et cela peut être visible à l'oeil nu.
+Pour résoudre ce problème, nous encodons le pan sur deux canaux, soit 16 bits. Cela offre 65536 valeurs, soit une résolution angulaire de 540°/65536 = 0.008°. C'est bien plus précis.
+\newline
+\newline
+Tout cela est indiqué dans le manuel du projecteur. Un projecteur peut avoir plusieurs modes de fonctionnement, et donc plusieurs associations DMX-paramètres differentes.
