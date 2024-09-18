@@ -1,0 +1,78 @@
+\section{Le patch}
+\label{sec:patch}
+
+Le patch est un document qui répertorie tous les projecteurs utilisés pour un spectacle, ainsi que leur adresse DMX et leurs modes.
+
+\subsection{ID}
+\label{subsec:patch_id}
+
+Avant toute chose, il est important de donner un identifiant à chaque projecteur. Cela permet de les distinguer facilement dans le patch et dans la console.
+Généralement, il est conseillé de les trier par type de projecteur, et d'associer une centaine à chaque type.
+Par exemple, les Starway Modenas auront des ID de 101 à 199, les Starway Dinos de 201 à 299, etc.
+Ensuite, il faut ordonner les projecteurs par emplacement sur la scène, pour faciliter la programmation. Cela relève de la logique de chacun, mais il est important de rester cohérent.
+Personnellement, je fais pont par pont de gauche à droite, en commencant par le fond de scene.
+
+\subsection{Mode}
+\label{subsec:patch_mode}
+
+Pour chaque type de projecteur, il faut choisir un mode.
+Un mode avec peu de de canaux permet de mettre plus de projecteurs sur la console, mais avec moins de possibilités de réglages.
+Un mode avec beaucoup de canaux permet de régler plus de paramètres, mais prend plus de place sur la console.
+Il est important de trouver un compromis entre ces deux extrêmes, en fonction des besoins du spectacle.
+
+\subsection{Adressage DMX}
+\label{subsec:patch_adressage}
+
+À présent, il faut attribuer une adresse DMX à chaque projecteur.
+La première étape consiste à répartir les univers DMX. Mais qu'est ce qu'un univers ?
+\newline
+Comme dit précédemment (voir section \ref{sec:dmx}), le protocole DMX permet de contrôler 512 canaux. On appelle cet ensemble de 512 canaux un univers.
+Aussi, il faut veiller à ce que deux projecteurs n'utilisent pas le même canal.
+Ainsi, un seul univers ne peut pas posseder une infinité de projecteurs.
+Par ailleurs, lors du cablage des projecteurs, nous ne pouvons pas brancher plus de 32 projecteurs entre eux sur une même ligne (en théorie, en pratique, on évite de dépasser 20 projecteurs par ligne).
+Il faut donc répartir les projecteurs sur plusieurs univers.
+\newline
+\newline
+On essaiera de mettre sur un même univers les projecteurs proches les uns des autres, pour faciliter le cablage.
+Par exemple, les projecteurs du pont 1 seront sur l'univers 1, ceux du pont 2 sur l'univers 2, etc.
+\newline
+Si un univers contient plus de 20 projecteurs, il faudra utiliser un "booster". C'est un appareil qui prend un signal DMX en entrée, et qui le divise en plusieurs signaux DMX identiques en sortie.
+On pourra brancher 20 projecteurs sur chaque sortie du booster.
+\newline
+\newline
+Une fois les univers répartis, on peut attribuer une adresse DMX à chaque projecteur.
+On part de l'adresse 1 pour le premier projecteur, puis on ajoute le nombre de canaux utilisés par ce projecteur.
+Cela nous donne l'adresse du projecteur suivant.
+On continue ainsi jusqu'à ce que tous les projecteurs aient une adresse, ou alors jusqu'à ce que l'univers soit complet.
+\newline
+Attention : il n'est pas possible de patcher un projecteur à 10 canaux sur l'adresse 510 par exemple. En effet, cela dépasserait la limite de l'univers (le projecteur utilise les canaux 510 à 519, or l'univers ne contient que 512 canaux).
+
+\subsection{Le cas du gradateur}
+\label{subsec:patch_gradateur}
+
+Certains projecteurs ne recoivent pas de signal DMX (ce qu'on appelle des projecteurs traditionnels, ou "trad"). Leur intensité lumineuse est contrôlée par l'intensité du courant qui les alimente.
+Pour régler cette intensité, on utilise un gradateur. C'est un appareil qui prend un signal DMX en entrée, et qui envoie un courant électrique en sortie.
+Généralement, un gradateur peut contrôler plusieurs réseaux éléctriques indépendamment, et donc peut prendre plusieurs adresses DMX. Il faut donc voir le gradateur comme un "projecteur" à plusieurs canaux, même si plusieurs projecteurs sont branchés dessus.
+
+\subsection{Lien avec le plan de feu}
+\label{subsec:patch_plan_de_feu}
+
+Sur le plan de feu, il faut pouvoir savoir quel projecteur a quelle adresse.
+Pour cela, on peut indiquer directement l'adresse DMX sur le plan de feu, mais cela peut vite devenir illisible.
+On peut aussi indiquer l'ID du projecteur, et faire un tableau de correspondance entre les ID et les adresses DMX.
+\newline
+Dans le cas des prestations les plus complexes, on peut mettre les adresses dans les projecteurs en avance, mettre un bout de scotch avec l'ID sur le projecteur et indiquer les ID sur le plan de feu.
+Comme ça, pas besoin de tableau de correspondance ni d'adresse, on sait directement où placer le projecteur.
+
+\subsection{Limitations des consoles}
+\label{subsec:patch_limitations}
+
+Il est primordial de connaître les limites de la console en terme de patch.
+En effet, chaque console a une capacité maximale de canaux DMX qu'elle peut gérer.
+Il est donc important de ne pas dépasser cette limite, sous peine de voir des projecteurs ne pas répondre.
+\newline
+\newline
+Par exemple, la console Infinity Chimp 300 peut gérer 2048 canaux DMX, soit 4 univers. Il n'est pas possible de patcher plus de 2048 canaux.
+\newline
+\newline
+Dès qu'on utilise une console, il est important de se renseigner sur ses capacités, et patcher en fonction (en utilisant des modes avec moins de canaux par exemple).
