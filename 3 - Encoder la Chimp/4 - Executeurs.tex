@@ -1,0 +1,96 @@
+\section{Les exécuteurs}
+\label{sec:executeurs}
+
+Les executeurs sont des boutons (physiques ou virtuels) qui permettent de lancer divers éléments de programmation.
+
+\subsection{Couleurs}
+\label{subsec:exec_couleurs}
+
+La première étape va être de créer des exécuteurs pour les couleurs de vos projecteurs.
+\newline
+Il y a deux façon de faire : soit vous créez un executeur par couleur et par groupe de projecteurs, soit vous créez des ambiances sur toutes vos lumières.
+\newline
+\newline
+Dans les deux cas, le principe de création est le même : sélectionnez les fixtures que vous voulez inclure dans l'executeur et donnez leur une couleur grâce aux presets. Enregistrez ensuite l'executeur en appuyant sur \textit{Rec} et en cliquant sur une case vide de la fenêtre \textit{Executors} (sur la page 1 de cette fenêtre).
+\newline
+\newline
+Il ne faut pas oublier de créer un executeur "Blanc" qui sera toujours activé, et qui contient toutes les fixtures en blanc. C'est important car la couleur par défaut
+de certains projecteur peut ne pas être blanc. Par exemple, pour les projecteurs LED RGBW, la couleur par défaut (tout à 100\%) est un peu violet.
+\newline
+Cela ne signifie pas que toutes les lumières seront toujours blanches, mais si aucune autre couleur n'est selectionnée, les lumières seront blanches.
+\newline
+\newline
+N'hesitez pas, particulièrement pour ces execteurs, de colorer les boutons d'executeurs (voir section \ref{subsec:prep_colorer}).
+\newline
+\newline
+Les paramètres par defaut de la cuelist conviennent généralement bien, mais il peut être interessant d'ajuster le In Fade au besoin de votre spectacle.
+
+\subsection{Positions}
+\label{subsec:exec_positions}
+
+Les executeurs de positions suivent le même principe que les couleurs. La seule
+difference est qu'il faut ajouter le Master Fade 1 dans les paramètres de la cuelist.
+
+\subsection{Gobo/Beam}
+\label{subsec:exec_gobo_beam}
+
+Les executeurs de Gobo/Beam suivent le même principe que les couleurs.
+\newline
+\newline
+\textbf{IMPORTANT :} À partir de cette étape, il est important de visualiser ce que font les lumières (en vrai ou sur un visualiseur).
+Si vous encodez à l'aveugle car le projecteur n'est pas disponible dans la librairie de votre visualisateur, c'est maintenant qu'il faut effectuer la procédure de morphing (voir section \ref{subsec:fixture_morph}).
+
+\subsection{Effets}
+\label{subsec:exec_effets}
+
+Il est enfin temps d'aborder les effets.
+\newline
+Il s'agit de rendre dynamique certains paramètres dans le temps. Cela peut être un effet de Chaser (allumer des lumières séquentiellement), de mouvement, de couleur, etc.
+\newline
+\newline
+Pour créer un effet, il faut avant tout selectionner les fixtures sur lequel il va s'appliquer.
+Ensuite, il faut se rendre dans la partie \textit{Effects} du programmer (en page 2 en bas à droite),
+et cliquer sur \textit{Add FX}. Vous avez alors toute une librairie d'effets prédéfinis à votre disposition.
+Essayez les, modifiez les differents paramètres afin de trouver ce qui vous convient le mieux. Si vous
+souhaitez en savoir plus sur la création d'effet et le système de génération des effets, le manuel de la Chimp est plutôt bien fait à ce sujet.
+Une fois l'effet désiré trouvé, enregistrez le dans un executeur en appuyant sur \textit{Rec} et en cliquant sur une case vide de la fenêtre \textit{Executors} (sur une autre page que les couleurs).
+Pensez bien à ajouter le FX Speed Master 2 dans les paramètres de la cuelist ainsi crée.
+\newline
+\newline
+C'est aussi maintenant que vous allez pouvoir générer des effets de Chaser à mettre dans les faders. Mettez un chaser sur les Dinos dans
+le fader des Dinos par exemple.
+
+\subsection{Cuelist Chase}
+\label{subsec:exec_cuelist_chase}
+
+Pour l'instant, nous n'avons utilisé les cuelists que dans leur mode par défaut.
+Mais elles ont aussi un mode "Chase" qui permet d'enchainer plusieurs cues en boucle.
+C'est utile quand vous voulez faire une alternance rapide entre plusieurs états.
+\newline
+Si vous créez un executeur de cuelist chase, il faut ajouter le Speed Master 1 dans les paramètres de la cuelist.
+
+\subsection{Executeurs physiques}
+\label{subsec:exec_physiques}
+
+Dans les executeurs physiques (10 boutons à droite des faders), je vous recommande de mettre des effets très dynamiques,
+comme un Strobe Blackout, un flash de couleur ou une alternance de dimmer.
+\newline
+Au besoin, vous pouvez assigner jusque 10 pages de 10 executeurs physiques.
+
+\subsection{C'est prêt !}
+\label{subsec:exec_pret}
+
+Votre show est maintenant intégralement programmé. Voici quelques clés pour l'utiliser efficacement.
+Le FX Speed Master 1 (premier fader à droite) permet de régler la vitesse des effets d'intensité qui sont sur les faders.
+Le FX Speed Master 2 (deuxième fader à droite) permet de régler la vitesse des autres effets présents dans les executeurs.
+Le Speed Master 1 (troisième fader à droite) permet de régler la vitesse des cuelists en mode chase. On peut utiliser le bouton en "Tap BPM" pour synchroniser la vitesse de l'effet à la musique.
+Le Fade Master (quatrième fader à droite) permet de régler la durée des transitions entre les positions dans les executeurs.
+\newline
+\newline
+Pour passer d'un effet d'intensité à l'autre, utilisez les boutons au dessus des faders. Le bouton en dessous sert à allumer le groupe instantanément.
+\newline
+\newline
+Pensez bien a toujours garder activé l'executeur "Blanc" pour éviter les couleurs moches.
+\newline
+\newline
+Enfin, entrainez vous à utiliser votre encod sur des musiques pour vous y habituer.
