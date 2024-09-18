@@ -1,0 +1,77 @@
+\section{Faders d'intensité}
+\label{sec:faders_intensite}
+
+À partir de maintenant, nous allons enregistrer ce qu'on appelle des \textit{Cues}.
+Un Cue est un ensemble de valeurs de projecteurs à un instant donné.
+\newline
+\newline
+\textbf{Attention :} Il ne faut PAS enregistrer de valeurs brutes dans les Cues,
+il faut toujours enregistrer une valeur de preset. Si vous n'avez pas le preset
+que vous voulez, créez-le.
+
+\subsection{Fader Full}
+\label{subsec:fader_full}
+
+L'idée ici est d'associer chaque fader au contrôle de l'intensité d'un groupe de projecteurs.
+Généralement, on groupe les projecteurs par type.
+\newline
+\newline
+Pour chaque groupe, selectionnez le dans la banque de groupes, selectionnez le preset "Dimmer 100\%" et appuyez sur la touche \textit{Rec} du clavier.
+Cliquez sur le fader que vous voulez associer au groupe et donnez lui le nom du groupe.
+\newline
+Donner aussi une couleur au fader pour le retrouver plus facilement (voir section \ref{subsec:prep_colorer}).
+\newline
+\newline
+Appuyez sur le bouton \textit{Edit} du clavier et appuyez ensuite sur le fader.
+\newline
+\newline
+Dans l'onglet \textit{Edit Fader}, assignez le Pause button à l'action \textit{Back}.
+\newline
+Dans l'onglet \textit{Cuelist View}, double cliquez sur le nom de la Cue et appellez la "Full".
+Reglez le "In Fade" sur 0s
+\newline
+Dans l'onglet \textit{Cuelist Settings} :
+\begin{itemize}{}
+    \item Réglez le "Tracking" sur Disabled
+    \item Réglez le "Release Time" sur 0s
+    \item Réglez le "Effect Speed Master" sur FX Speed Master 1
+    \item Activez le "Dimmer HTP"
+    \item Gardez les autres paramètres par défaut
+\end{itemize}
+Faites la même chose pour chaque groupe. N'oubliez pas de \textit{Clear} entre chaque groupe.
+\newline
+\newline
+\textbf{Explication}
+\newline
+\newline
+Regler le pause button à l'action Back permet de librement passer d'une cue à l'autre quand on en aura plusieurs enregistrées sur un seul fader.
+\newline
+Le In Fade est la durée avec laquelle la Cue va s'activer. Généralement, pour des cues d'intensité, on met 0s.
+\newline
+Le Tracking indique si la Cuelist retient les valeurs des Cues précédentes.
+En le desactivant, on s'assure que chaque Cue de la Cuelist est indépendante, et on ne risque pas de mélanger tous les effets involontairement.
+Il est interessant de l'activer dans le cas de conduite lumière comme un Timecode par exemple (voir section \ref{sec:timecode}).
+\newline
+Le Release Time est le temps que mettra la Cue à s'éteindre. Ici, on veut que les Cues s'éteignent instantanément.
+\newline
+L'Effect Speed Master est le fader qui va contrôler la vitesse des effets. Il sera utile pour les effets de type Chaser qu'on verra en section \ref{subsec:exec_effets}.
+\newline
+HTP signifie Highest Takes Precedence. Cela signifie que si deux Cues d'intensité sont actives en même temps, la valeur la plus haute des deux sera prise en compte.
+C'est en opposition à LTP (Latest Takes Precedence) où c'est la dernière valeur executée qui est prise en compte.
+
+\subsection{Fader Strobe}
+\label{subsec:fader_strobe}
+
+Pour chaque groupe, selectionnez le et selectionnez le preset "Dimmer 100\%" ainsi qu'un preset de Strobe de votre choix.
+Enregistrez ça sur le fader déjà utilisé pour CE groupe. La console vous demandera si vous souhaitez \textit{Remove}, \textit{Replace}, \textit{Merge} ou \textit{Append}.
+Choisissez \textit{Append} et entrez un nom logique pour la cue, comme "Strobe".
+\newline
+Pensez à modifier la valeur de In Fade de la Cue à 0s (voir section précédente).
+\newline
+\newline
+Faites de même pour tous les groupes.
+
+\subsection{Fader Chaser}
+\label{subsec:fader_chaser}
+
+Nous verrons les effets un petit peu plus tard, mais garder en tête que nous ajouterons une ou plusieurs Cues pour chaque groupe pour les effets de type Chaser.

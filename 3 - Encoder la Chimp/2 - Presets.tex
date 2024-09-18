@@ -1,0 +1,100 @@
+\section{Presets}
+\label{sec:presets}
+
+Un preset est un ensemble de paramètres de fixtures qui peut être sauvegardé et modifié.
+
+\subsection{Pourquoi utiliser des presets ?}
+\label{subsec:presets_pourquoi}
+
+Lorsqu'on prépare un show en avance, on n'a souvent pas accès aux vrais projecteurs, et ils ne sont de toute façon pas placés.
+Il est donc difficile de régler les paramètres des fixtures sans les voir en action.
+\newline
+Pour pallier à ce problème, on peut créer des presets qui semblent convenir sur la vue 3D, mais qui sont ammenés à être modifiés une fois les projecteurs en place.
+\newline
+Ainsi, on peut utiliser et les valeurs des presets partout dans la programmation, il suffira de modifier uniquement les presets et toute la programmation s'adaptera.
+
+\subsection{Créer un preset}
+\label{subsec:presets_creer}
+
+Pour créer un preset, selectionnez les fixtures que vous voulez inclure dans le preset,
+ouvrez la fenetre \textit{Presets} en haut a droite, en mode \textit{Link to programmer}.
+\newline
+Ensuite, choisissez la catégorie de paramères que vous voulez enregistrer (\textit{Intensity}, \textit{Position}, \textit{Color}, etc.).
+Ajustez les valeurs des paramètres à l'aide des encodeurs. Les valeurs en rouge sont celles qui vont être enregistrées.
+\newline
+Pour enregistrer le preset, appuyez sur \textit{Rec} et cliquez sur une case vide de la fenetre \textit{Presets}.
+\newline
+Appuyez sur la touche \textit{Clear} plusieurs fois pour reinitialiser l'état des fixtures, et recommencez pour les autres presets et fixtures.
+\newline
+\newline
+\textbf{Attention :} Ne creez deux presets differents pour la même valeur sur deux types de fixtures différents.
+Par exemple, ne créer pas un preset "Modena Rouge" et un preset "Dino Rouge", mais faites un seul preset "Rouge" qui s'applique à toutes les fixtures.
+\newline
+Si vous voulez tout de même enregistrer fixture par fixture, vous pouvez fusionner ce que vous souhaitez enregistrer avec ce qui a déjà été enregistré : appuyez sur \textit{Rec} et selectionnez le preset à fusionner.
+Une fenêtre apparaitra, choisissez \textit{Merge} pour fusionner les valeurs.
+\newline
+\newline
+
+\subsection{Quoi enregistrer ?}
+\label{subsec:presets_quoi}
+
+\subsubsection{Intensity}
+\label{subsubsec:presets_intensity}
+Enregistrez les valeurs de Dimmer 0\%, 50\% et 100\%.
+Enregistrez plusieurs types de Shutter : Open, Strobe Fast, Strobe Slow, Closed.
+\newline
+\newline
+Quand vous enregistrez un Dimmer, n'enregistrez pas de Shutter, et vice versa.
+
+\subsubsection{Position}
+\label{subsubsec:presets_position}
+Si vous ne disposez pas de visualisateur, enregistrez à chaque fois une position 0° pan et tilt. Vous pourrez les modifier plus tard.
+\newline
+Enregistrez des positions du type : Divergent, Centre, Convergent, Croisé 1, Croisé 2 et toute autre position qui peut vous sembler interessante.
+\newline
+\newline
+Pour créer rapidement ces positions, vous pouvez utiliser la fonction \textit{Fan}.
+Selectionnez un groupe LTR, mettez le tilt vers le haut (public ou plus haut),
+appuyez sur \textit{Fan} sur le clavier et modifiez le pan. Vous êtes en train
+de créer une position de type Divergent ou Convergent.
+\newline
+Si vous selectionnez un groupe Sym, cela créera des positions croisées.
+\newline
+\newline
+\textbf{Attention :} N'enregistrez pas dans les presets de position d'autres attributs comme "P/T Speed".
+Si vous avez malencontreusement modifié une valeur que vous ne souhaitez pas enregistrer (et qui apparait donc en rouge),
+cliquez sur la valeur, appuyez sur la touche \textit{Set} et choisissez \textit{Off} sur l'ecran.
+
+\subsubsection{Color}
+\label{subsubsec:presets_color}
+
+Ici, vous allez créer un ensemble de couleurs de base : Rouge, Orange, Jaune, Vert, Cyan, Bleu, Violet, Magenta et Blanc.
+\newline
+Ici, vous allez vouloir enregistrer TOUS les attributs de couleur en même temps, à chaque fois. Toutes les roues, toutes les LEDs, etc.
+
+\subsubsection{Gobo/Beam}
+\label{subsubsec:presets_gobo_beam}
+
+Du fait que les gobos et les beams sont souvent liés, je vous recommande de les enregistrer ensemble.
+\newline
+\newline
+Pour cela, mettez la page \textit{Presets} en mode \textit{All}.
+Enregistrez les ensembles de gobo, prisme, zoom ensemble. N'oubliez jamais d'enregistrer l'attribut de Focus dans les presets de ce type.
+
+\subsubsection{Autres}
+\label{subsubsec:presets_autres}
+
+De manière analogue, vous pouvez enregistrer d'autres presets comme des Macros, des commandes Control (Lamp On par exemple).
+
+\subsection{Faire un preset la lumière éteinte ?}
+\label{subsec:presets_lumiere_eteinte}
+
+Si vous n'avez pas de visualisateur, la question ne se pose pas, vous ferez tout à l'aveugle de toute façon.
+\newline
+Cependant, si vous avez un visualisateur, ou les lumières réelles devant vous, il serait bien de pouvoir voir ce que vous faites.
+Pour cela, créez d'abord les presets d'intensité. Ensuite, réalisez ce qui est indiqué dans la section \ref{subsec:fader_full}.
+A partir de là, vous pourrez contrôler l'intensité des fixtures avec les faders sans risquer d'enregistrer de valeur de dimmer.
+Vous pouvez à présent continuer de créer vos autres presets.
+\newline
+\newline
+Pro tip : Il est possible de donner des icônes aux presets. Pour cela, appuyez sur \textit{Edit} et cliquez sur le preset que vous voulez modifier. Vous pouvez choisir une icône ou une couleur parmi celles proposées.
